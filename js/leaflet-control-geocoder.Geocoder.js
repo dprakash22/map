@@ -35,7 +35,7 @@ module.exports = {
 
 		findseacrh: function(){
 			const url=window.location.href
-			const place=url.split("http://localhost:8000/")[1].split("#")[0].split("=")[1]
+			const place=url.split("https://dprakash22.github.io/map/")[1].split("#")[0].split("=")[1]
 			myresult=place
 			this._geocode()
 		},
