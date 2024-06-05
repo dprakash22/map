@@ -1,7 +1,7 @@
 ### 1. Install QGIS and QGIS2Web Plugin
 
 - **Download and Install QGIS**:
-    - Go to the [QGIS official website](https://qgis.org/) and download the latest version of QGIS.
+    - Go to the QGIS official website and download the latest version of QGIS.
     - Install QGIS following the instructions for your operating system.
 - **Install QGIS2Web Plugin**:
     - Open QGIS.
