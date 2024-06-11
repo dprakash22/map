@@ -43,9 +43,10 @@
         <script src="data/IND_adm2_4.js"></script>
         <script src="data/IND_adm3_5.js"></script>
         <script>
-            var lat;
-            var lon;
-            var zoomLevel;
+            const url=window.location.href
+            var lat = 20.5937;
+            var lon = 78.9629;
+            var zoomLevel = 5; 
 
             // Initialize the map
             var map = L.map('map', {
