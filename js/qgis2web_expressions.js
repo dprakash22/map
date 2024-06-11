@@ -26,12 +26,6 @@ function fnc_coalesce(values, context) {
 // General
 
 // Geometry
-map.on('click', function(e) {
-    var lat = e.latlng.lat;
-    var lng = e.latlng.lng;
-    alert("You clicked the map at latitude: " + lat + " and longitude: " + lng);
-    // You can replace the alert with any other logic you need
-});
 
 
 function fnc_azimuth(values, context) {
