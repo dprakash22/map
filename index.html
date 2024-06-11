@@ -44,9 +44,9 @@
         <script src="data/IND_adm3_5.js"></script>
         <script>
             const url=window.location.href
-            var lat = 20.5937;
-            var lon = 78.9629;
-            var zoomLevel = 5; 
+            var lat = url.split("https://dprakash22.github.io/map/")[1].split("#")[0].split("=")[1].split(",")[0];
+            var lon =  url.split("https://dprakash22.github.io/map/")[1].split("#")[0].split("=")[1].split(",")[1];
+            var zoomLevel = 14; 
 
             // Initialize the map
             var map = L.map('map', {

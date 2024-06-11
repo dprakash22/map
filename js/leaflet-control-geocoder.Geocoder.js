@@ -175,6 +175,7 @@
 	
 				this.fire('start' + mode, eventData);
 				// this.options.geocoder[mode](this._input.value, function(results) { myresult inga apply pannanu
+					myresult=this._input.value==""? myresult:this._input.value
 					this.options.geocoder[mode](myresult, function(results) {
 					if (requestCount === this._requestCount) {
 						eventData.results = results;
