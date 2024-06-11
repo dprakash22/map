@@ -35,8 +35,7 @@
 	
 			findseacrh: function(){
 				const url=window.location.href
-				const place=url.split("http://dprakash22.github.io/map/")[1].split("#")[0].split("=")[1]
-				// const place=url.split("http://localhost:8001/")[1].split("#")[0].split("=")[1]
+				const place=url.split("https://dprakash22.github.io/map/")[1].split("#")[0].split("=")[1]
 				myresult=place
 				this._geocode()
 			},
@@ -176,7 +175,6 @@
 	
 				this.fire('start' + mode, eventData);
 				// this.options.geocoder[mode](this._input.value, function(results) { myresult inga apply pannanu
-					// myresult=this._input.value==""? myresult:this._input.value
 					this.options.geocoder[mode](myresult, function(results) {
 					if (requestCount === this._requestCount) {
 						eventData.results = results;
