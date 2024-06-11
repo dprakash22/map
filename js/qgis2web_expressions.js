@@ -26,8 +26,6 @@ function fnc_coalesce(values, context) {
 // General
 
 // Geometry
-
-
 function fnc_azimuth(values, context) {
     return false;
 };

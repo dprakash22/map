@@ -47,7 +47,7 @@
 					form = this._form = L.DomUtil.create('div', className + '-form', container),
 					input;
 	
-				this._map = map;
+				this._map = map;	
 				this._container = container;
 	
 				icon.innerHTML = '&nbsp;';
