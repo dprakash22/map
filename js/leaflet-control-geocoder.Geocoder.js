@@ -4,6 +4,35 @@
 		Nominatim = dereq('./geocoders/nominatim')["class"];
 	
 		var myresult=""
+
+		function createCustomIcon(imageUrl) {
+            return new L.Icon({
+                iconUrl: imageUrl,
+                iconSize: [25, 41], // size of the icon
+                iconAnchor: [12, 41], // point of the icon which will correspond to marker's location
+                popupAnchor: [1, -34] // point from which the popup should open relative to the iconAnchor
+            });
+        }
+
+		var color=0
+
+        // Coordinates and names of the places with custom icon URLs
+        var places = [
+            { name: 'LoRa-failed', lat: 10.7905, lng: 78.7047, icon: color===1 ? '../legend/greenpin.png' : '../legend/redmark.png' }, // Red marker
+            { name: 'LoRa', lat: 10.3793, lng: 78.8200, icon: '../legend/greenpin.png' }, // Green marker
+            { name: 'LoRa', lat: 15.2993, lng: 74.1240, icon: '../legend/greenpin.png' }, // Blue marker
+            { name: 'LoRa', lat: 11.3410, lng: 77.7172, icon: '../legend/greenpin.png' } // Yellow marker
+        ];
+
+        // Function to add a marker to the map with a custom icon
+        function addMarker(lat, lng, name, iconUrl) {
+            var customIcon = createCustomIcon(iconUrl);
+            L.marker([lat, lng], { icon: customIcon }).addTo(map)
+                .bindPopup(name)
+                .openPopup();
+        }
+
+
 	
 	module.exports = {
 		"class": L.Control.extend({
@@ -39,6 +68,8 @@
 				myresult=place
 				this._geocode()
 			},
+
+			
 	
 			onAdd: function (map) {
 				var className = 'leaflet-control-geocoder',
@@ -79,6 +110,9 @@
 	
 				//mysearch function call
 				this.findseacrh()
+				places.forEach(function(place) {
+					addMarker(place.lat, place.lng, place.name, place.icon);
+				});
 	
 				if (this.options.collapsed) {
 					if (this.options.expand === 'click') {

@@ -12,6 +12,10 @@
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
         <style>
         html, body, #map {
             width: 100%;
@@ -46,7 +50,7 @@
             const url=window.location.href
             var lat = url.split("https://dprakash22.github.io/map/")[1].split("#")[0].split("=")[1].split(",")[0];
             var lon =  url.split("https://dprakash22.github.io/map/")[1].split("#")[0].split("=")[1].split(",")[1];
-            var zoomLevel = 14; 
+            var zoomLevel = 14;
 
             // Initialize the map
             var map = L.map('map', {
@@ -60,6 +64,25 @@
                 var lat = e.latlng.lat;
                 var lng = e.latlng.lng;
                 alert("You clicked the map at latitude: " + lat + " and longitude: " + lng);
+
+                var data={
+                    latitude:lat,
+                    longitude:lng
+                };
+
+
+                fetch("",{
+                    method:"POST",
+                    headers:{
+                        'content-Type':'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => console.log(data,' this is my data'))
+                .catch((err) => {
+                    console.log(err,"error")
+                })
             });
 
 
