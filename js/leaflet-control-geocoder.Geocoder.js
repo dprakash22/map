@@ -19,7 +19,7 @@
         // Coordinates and names of the places with custom icon URLs
         var places = [
             { name: 'LoRa-failed', lat: 10.7905, lng: 78.7047, icon: color===1 ? '../legend/greenpin.png' : '../legend/redmark.png' }, // Red marker
-            { name: 'LoRa', lat: 10.3793, lng: 78.8200, icon: 'https://drive.google.com/file/d/1SOgLpRi9O2ptDtrES0pLDWoipQqH-fUb/view?usp=sharing' }, // Green marker
+            { name: 'LoRa', lat: 10.3793, lng: 78.8200, icon: 'https://drive.google.com/thumbnail?id=https://drive.google.com/file/d/1SOgLpRi9O2ptDtrES0pLDWoipQqH-fUb/view?usp=sharing' }, // Green marker
             { name: 'LoRa', lat: 15.2993, lng: 74.1240, icon: '../legend/greenpin.png' }, // Blue marker
             { name: 'LoRa', lat: 11.3410, lng: 77.7172, icon: '../legend/greenpin.png' } // Yellow marker
         ];
