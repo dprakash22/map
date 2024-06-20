@@ -25,7 +25,7 @@
 			{ name: 'LoRa-Active', lat: 13.045870186642654, lng: 80.19507229655638, icon: 'https://cdn-icons-png.freepik.com/256/15092/15092032.png?ga=GA1.1.1798749253.1718557894&semt=ais_hybrid' },
 			{ name: 'LoRa-Active', lat: 13.11342152384103, lng: 80.10902922454527, icon: 'https://cdn-icons-png.freepik.com/256/15092/15092032.png?ga=GA1.1.1798749253.1718557894&semt=ais_hybrid' },
 			{ name: 'LoRa-Active', lat: 13.201154377410116, lng: 80.18381346464102, icon: 'https://cdn-icons-png.freepik.com/256/15092/15092032.png?ga=GA1.1.1798749253.1718557894&semt=ais_hybrid' },
-			{ name: 'LoRa-Failed', lat: 13.25026628555937, lng: 80.27500977654219, icon: color===1 ? 'https://cdn-icons-png.freepik.com/256/15092/15092032.png?ga=GA1.1.1798749253.1718557894&semt=ais_hybrid' : 'https://cdn-icons-png.freepik.com/256/7018/7018865.png?ga=GA1.1.1798749253.1718557894&semt=ais_hybrid' },
+			{ name: 'LoRa-Failed', lat: 13.25026628555937, lng: 80.27500977654219, icon: color===1 ? 'https://cdn-icons-png.freepik.com/256/15092/15092032.png?ga=GA1.1.1798749253.1718557894&semt=ais_hybrid' : 'https://cdn-icons-png.freepik.com/256/7506/7506897.png?ga=GA1.1.1798749253.1718557894&semt=ais_hybrid' },
         ];
 
         // Function to add a marker to the map with a custom icon
